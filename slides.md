@@ -111,44 +111,44 @@ layout: full
 <div class="flex items-center justify-center h-full">
   <div class="w-full max-w-6xl px-16">
 
-    <h2 class="text-center mb-20">La transition vers Rolldown</h2>
+  <h2 class="text-center mb-20">La transition vers Rolldown</h2>
 
-    <div class="relative">
-      <div class="absolute top-12 left-0 right-0 h-0.5 bg-gradient-to-r from-violet-500 via-yellow-500 to-green-500 opacity-30"></div>
+<div class="relative">
+  <div class="absolute top-12 left-0 right-0 h-0.5 bg-gradient-to-r from-violet-500 via-yellow-500 to-green-500 opacity-30"></div>
 
-      <div class="grid grid-cols-3 gap-8">
+  <div class="grid grid-cols-3 gap-8">
 
-        <div v-click="1" class="relative flex flex-col items-center">
-          <div class="w-24 h-24 rounded-full bg-violet-500 bg-opacity-20 border-2 border-violet-500 flex items-center justify-center mb-6 relative z-10">
-            <img src="./public/assets/rollup-logo.svg" width="48" />
-          </div>
-          <h3 class="text-xl font-bold text-violet-400 mb-2">Rollup</h3>
-          <p class="text-sm opacity-60 text-center">Aujourd'hui</p>
-        </div>
+<div v-click="1" class="relative flex flex-col items-center">
+  <div class="w-24 h-24 rounded-full bg-violet-500 bg-opacity-20 border-2 border-violet-500 flex items-center justify-center mb-6 relative z-10">
+    <img src="./public/assets/rollup-logo.svg" width="48" />
+  </div>
+  <h3 class="text-xl font-bold text-violet-400 mb-2">Rollup</h3>
+  <p class="text-sm opacity-60 text-center">Aujourd'hui</p>
+</div>
 
-        <div v-click="2" class="relative flex flex-col items-center">
-          <div class="w-24 h-24 rounded-full bg-yellow-500 bg-opacity-20 border-2 border-yellow-500 flex items-center justify-center mb-6 relative z-10">
-            <img src="./public/assets/lightning-down.svg" width="48" />
-          </div>
-          <h3 class="text-xl font-bold text-yellow-400 mb-2">Rolldown</h3>
-          <p class="text-sm opacity-80 text-center font-semibold">Optionnel</p>
-          <p class="text-sm opacity-60 text-center mt-1">Vite 6 · 2025</p>
-        </div>
+<div v-click="2" class="relative flex flex-col items-center">
+  <div class="w-24 h-24 rounded-full bg-yellow-500 bg-opacity-20 border-2 border-yellow-500 flex items-center justify-center mb-6 relative z-10">
+    <img src="./public/assets/lightning-down.svg" width="48" />
+  </div>
+  <h3 class="text-xl font-bold text-yellow-400 mb-2">Rolldown</h3>
+  <p class="text-sm opacity-80 text-center font-semibold">Optionnel</p>
+  <p class="text-sm opacity-60 text-center mt-1">Vite 6 · 2025</p>
+</div>
 
-        <div v-click="3" class="relative flex flex-col items-center">
-          <div class="w-28 h-28 rounded-full bg-green-500 bg-opacity-30 border-3 border-green-400 flex items-center justify-center mb-6 relative z-10 shadow-lg shadow-green-500/50">
-            <img src="./public/assets/lightning-down.svg" width="56" />
-          </div>
-          <div class="absolute top--2 right-4 px-2 py-1 bg-green-500 rounded-full text-xs font-bold animate-pulse">
-            NEW
-          </div>
-          <h3 class="text-2xl font-bold text-green-400 mb-2">Rolldown</h3>
-          <p class="text-base opacity-90 text-center font-bold text-green-300">Par défaut</p>
-          <p class="text-sm opacity-70 text-center mt-1 font-semibold">Vite 8 · Q1 2026</p>
-        </div>
+<div v-click="3" class="relative flex flex-col items-center">
+  <div class="w-28 h-28 rounded-full bg-green-500 bg-opacity-30 border-3 border-green-400 flex items-center justify-center mb-6 relative z-10 shadow-lg shadow-green-500/50">
+    <img src="./public/assets/lightning-down.svg" width="56" />
+  </div>
+  <div class="absolute top--2 right-4 px-2 py-1 bg-green-500 rounded-full text-xs font-bold animate-pulse">
+    NEW
+  </div>
+  <h3 class="text-2xl font-bold text-green-400 mb-2">Rolldown</h3>
+  <p class="text-base opacity-90 text-center font-bold text-green-300">Par défaut</p>
+  <p class="text-sm opacity-70 text-center mt-1 font-semibold">Vite 8 · Q1 2026</p>
+</div>
 
-      </div>
-    </div>
+  </div>
+</div>
 
   </div>
 </div>
