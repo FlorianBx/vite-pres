@@ -155,80 +155,96 @@ layout: full
 
 <div class="flex items-center justify-center h-full">
   <div class="w-full max-w-6xl px-16">
-    <h2 v-hide class="text-center mb-16">Our Rolldown Migration</h2>
-    <div :class="$clicks >= 3 ? 'scale-50' : 'scale-100'" class="relative">
-      <div class="flex justify-center items-center gap-16 mb-16">
-        <div v-click="1" class="flex flex-col items-center">
-          <div class="w-32 h-32 rounded-full bg-red-500 bg-opacity-20 border-2 border-red-500 flex items-center justify-center mb-6 relative z-10">
+    <h2 class="text-center">Benchmark on DT_Main</h2>
+    <p class="opacity-50 text-center">On a M4 computer</p>
+    <div class="flex justify-center items-center gap-16">
+      <div class="flex flex-col items-center">
+        <div class="w-32 h-32 rounded-full border-2 border-red-500 mb-6 relative z-10">
+          <div class="w-full h-full rounded-full flex items-center justify-center" style="background: linear-gradient(rgba(239, 68, 68, 0.2), rgba(239, 68, 68, 0.2)), #0f0f0f;">
             <img src="./public/assets/rollup-logo.svg" width="64" />
           </div>
-          <h3 class="text-xl font-bold text-red-400 mb-3">Rollup</h3>
-          <div class="text-5xl font-bold opacity-80">
-            1:24
-          </div>
-          <p class="text-sm opacity-50 mt-2">minutes</p>
         </div>
-        <div v-click="2" class="text-6xl opacity-40">
-          →
+        <h3 class="text-xl font-bold text-red-400 mb-3">Rollup</h3>
+        <div class="text-5xl font-bold opacity-80">
+          1:24
         </div>
-        <div v-click="2" class="flex flex-col items-center">
-          <div class="w-34 h-34 rounded-full bg-yellow-500 bg-opacity-25 border-3 border-yellow-400 flex items-center justify-center mb-6 relative z-10 shadow-lg shadow-yellow-500/40">
+        <p class="text-sm opacity-50 mt-2">minutes</p>
+      </div>
+      <div class="text-6xl opacity-40">
+        →
+      </div>
+      <div v-click="1" class="flex flex-col items-center">
+        <div class="w-32 h-32 rounded-full border-3 border-yellow-400 mb-6 relative z-10 shadow-lg shadow-yellow-500/40">
+          <div class="w-full h-full rounded-full flex items-center justify-center" style="background: linear-gradient(rgba(234, 179, 8, 0.25), rgba(234, 179, 8, 0.25)), #0f0f0f;">
             <img src="./public/assets/lightning-down.svg" width="72" />
           </div>
-          <h3 class="text-2xl font-bold text-yellow-400 mb-3">Rolldown</h3>
-          <div class="mt--1 text-5xl font-bold bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">
-            8s
-          </div>
-          <p class="text-sm opacity-60 mt-2 font-semibold">seconds</p>
         </div>
-      </div>
-      <div v-click="3" class="text-center mt-20">
-        <template v-if="$clicks >= 3">
-        <p>Build time reduced:</p>
-          <AnimateNumber v-slot="{ number, target }" :value="97.4" :duration="500">
-            <div
-              class="text-8xl font-mono font-bold bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent"
-              :style="{ transform: `scale(${1 + (number / target / 4)})` }"
-            >
-              {{ number.toFixed(1).padStart(4, '0') }}%
-            </div>
-          </AnimateNumber>
-        </template>
+        <h3 class="text-2xl font-bold text-yellow-400 mb-3">Rolldown</h3>
+        <div class="text-5xl font-bold bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent animate-pulse">
+          8s
+        </div>
+        <p class="text-sm opacity-60 mt-2 font-semibold">seconds</p>
       </div>
     </div>
   </div>
 </div>
 
 <!--
-**SPEAKER NOTES - Slide 4 (45s)**
+**SPEAKER NOTES - Slide 4 (30s)**
 
-We tested Rolldown on our codebase, and the results are spectacular.
+We tested Rolldown on our codebase. Let me show you the real-world impact.
 
 Build time BEFORE with Rollup: 1 minute 24 seconds.
 
 Build time AFTER with Rolldown: 8 seconds.
 
-That represents a 97.4% reduction in build time.
-
-Concretely, what does this change?
-
-For developers: you iterate faster. You make a change, you test, it's almost instantaneous.
-
-For deployments: we save almost 1.5 minutes per build. Over a day with 50 deployments, that's over an hour saved just on builds.
-
-And that's just with Rolldown. There's even better with VitePlus.
+Let me show you what that represents in terms of performance gain on the next slide.
 -->
 
 ---
-layout: full
+layout: center
+class: text-center
+preload: false
 ---
 
 <div class="flex items-center justify-center h-full">
+  <div>
+    <AnimateNumber v-slot="{ number, target }" :value="90.5" :duration="1000">
+      <div
+        class="text-9xl font-mono font-bold bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent"
+        :style="{ transform: `scale(${1 + (number / target / 5)})` }"
+      >
+        {{ number.toFixed(1) }}%
+      </div>
+    </AnimateNumber>
+    <p class="text-3xl opacity-100 !mt-18">Less moulining than before</p>
+  </div>
+</div>
+
+<!--
+**SPEAKER NOTES - Slide 5 (20s)**
+
+That's a 97.4% reduction in build time.
+
+Think about it: from over a minute to 8 seconds. That's the power of Rolldown.
+
+For developers: you iterate faster. Changes appear almost instantly.
+
+For deployments: we save over a minute per build. With 50 deployments a day, that's nearly an hour saved just on builds.
+
+And that's just Rolldown. There's even better coming with VitePlus.
+-->
+---
+layout: full
+preload: false
+---
+<PulseGradient />
+<div class="flex items-center justify-center h-full">
   <div class="text-center">
-    <div v-click="1" class="mb-8">
-      <img src="./public/assets/vite+.svg" class="h-32 mx-auto" />
+    <div class="mb-8">
+      <img src="./public/assets/vite+.svg" class="h-48 mx-auto" />
     </div>
-    <p v-click="2" class="text-xl opacity-70 font-light mt-12">
+    <p class="text-xl opacity-70 font-bold !mt-10">
       The Unified JavaScript Toolchain
     </p>
   </div>
@@ -275,9 +291,8 @@ layout: center
 class: text-center
 ---
 
-# OxLint vs ESLint
-
-## Our Benchmarks
+<h2 class="text-center mt--12">Benchmark on DT_Main</h2>
+<p class="opacity-50 text-center">On a M4 computer</p>
 
 <div class="mt-12 grid grid-cols-2 gap-16 max-w-4xl mx-auto">
 
@@ -295,13 +310,6 @@ class: text-center
 </div>
 </div>
 
-</div>
-
-<div v-click="2" class="mt-16">
-<div class="text-5xl font-bold text-green-400">
-41x faster
-</div>
-<p class="text-lg opacity-70 mt-4">On our current codebase</p>
 </div>
 
 <!--
@@ -331,8 +339,8 @@ layout: full
 ---
 
 <div class="flex items-center justify-center h-full px-16">
-  <div class="grid grid-cols-2 gap-16 items-center w-full max-w-6xl">
-    <div class="space-y-8">
+  <div class="grid grid-cols-3 gap-16 items-center w-full max-w-6xl">
+    <div class="space-y-8 col-span-2">
       <h2 class="text-4xl font-bold mb-8">Vitest Browser Mode</h2>
       <div class="space-y-4">
         <div class="flex items-start gap-4">
@@ -362,7 +370,7 @@ layout: full
         </div>
       </div>
     </div>
-    <div class="flex items-center justify-center">
+    <div class="flex items-center justify-center scale-150 mt--50">
       <img src="/assets/vitest-browser.png" class="w-full rounded-lg shadow-2xl" alt="Vitest Browser Mode" />
     </div>
 
@@ -386,75 +394,24 @@ It's a game changer for front-end testing.
 -->
 
 ---
-layout: center
----
-
-# Impact for Us
-
-<div class="flex flex-wrap gap-12 mt-12 max-w-4xl mx-auto text-left">
-
-<div v-click="1" class="p-6 w-96 h-48 bg-gray-800 bg-opacity-10 rounded-xl border-l-4 border-violet-400">
-<h3 class="text-2xl font-bold mb-3 text-violet-300">📦 Build</h3>
-<p class="text-lg opacity-90">Rolldown: <strong>-90%</strong> time · Faster deployments</p>
-</div>
-
-<div v-click="2" class="p-6 w-96 h-48 bg-gray-800 bg-opacity-10 rounded-xl border-l-4 border-yellow-400">
-<h3 class="text-2xl font-bold mb-3 text-yellow-300">🔍 Lint</h3>
-<p class="text-lg opacity-90">OxLint: <strong>41x faster</strong> · Instant feedback in dev</p>
-</div>
-
-<div v-click="3" class="p-6 w-96 h-48 bg-gray-800 bg-opacity-10 rounded-xl border-l-4 border-green-400">
-<h3 class="text-2xl font-bold mb-3 text-green-300">🎯 Developer Experience</h3>
-<p class="text-lg opacity-90">Less waiting = more productivity = happier teams</p>
-</div>
-
-<div v-click="4" class="p-6 w-96 h-48 bg-gray-800 bg-opacity-10 rounded-xl border-l-4 border-blue-400">
-<h3 class="text-2xl font-bold mb-3 text-blue-300">🚀 Roadmap</h3>
-<p class="text-lg opacity-90">Progressive migration to VitePlus in 2025</p>
-</div>
-
-</div>
-
-<!--
-**SPEAKER NOTES - Slide 7 (45s)**
-
-So concretely, what are the key takeaways for us?
-
-On BUILD: with Rolldown, we divide our build times by 10. This directly impacts our deployments and development velocity.
-
-On LINT: OxLint is 41 times faster. This means less waiting, less friction, almost instantaneous feedback in the editor.
-
-On overall DEVELOPER EXPERIENCE: all these gains accumulate. When you wait less, you iterate faster, you're less frustrated, you're more productive.
-
-And on our ROADMAP: we'll progressively migrate to these tools in 2025. Rolldown is already tested and ready. VitePlus will arrive mid-year.
-
-The JavaScript ecosystem is undergoing a major overhaul of its fundamental tools. And that's excellent news for all of us.
--->
-
----
-layout: center
+layout: full 
 class: text-center
 ---
 
-# Key Takeaways
-
-<div class="mt-16 max-w-3xl mx-auto space-y-8">
-
-<div v-click="1" class="text-3xl font-bold">
-🚀 <span class="bg-gradient-to-r from-violet-400 to-yellow-400 bg-clip-text text-transparent">Rolldown</span>
-</div>
-<p v-click="1" class="text-xl opacity-80">Vite's new native build engine · <strong>-90%</strong> time</p>
-
-<div v-click="2" class="text-3xl font-bold mt-8">
-⚡️ <span class="bg-gradient-to-r from-yellow-400 to-green-400 bg-clip-text text-transparent">VitePlus</span>
-</div>
-<p v-click="2" class="text-xl opacity-80">The unified toolchain of the future · Based on <strong>Oxc</strong></p>
-
-<div v-click="3" class="text-3xl font-bold mt-8">
-✨ <span class="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">For Us</span>
-</div>
-<p v-click="3" class="text-xl opacity-80">Progressive migration · Immediate gains · Improved DX</p>
-
+Key Takeaways
+<div class="grid grid-cols-2 gap-8 mt-12 max-w-6xl mx-auto text-left">
+  <div class="p-6 bg-gray-800 bg-opacity-10 rounded-xl border-l-4 border-violet-400 flex flex-col justify-center">
+    <h3 class="text-2xl font-bold mb-3 text-violet-300">🚀 Rolldown & VitePlus</h3>
+    <p class="text-lg opacity-90">The JavaScript ecosystem powered by Rust: <strong class="text-orange-300">-90% build time</strong> and a unified toolchain.</p>
+  </div>
+  <div class="p-6 bg-gray-800 bg-opacity-10 rounded-xl border-l-4 border-yellow-400 flex flex-col justify-center">
+    <h3 class="text-2xl font-bold mb-3 text-yellow-300">⚡️ OxLint & OxFmt</h3>
+    <p class="text-lg opacity-90">Linting and formatting <strong class="text-green-300">41x faster</strong> for instant feedback and improved DX.</p>
+  </div>
+  <div class="p-6 bg-gray-800 bg-opacity-10 rounded-xl border-l-4 border-green-400 flex flex-col justify-center">
+    <h3 class="text-2xl font-bold mb-3 text-green-300">✅ Vitest Browser Mode</h3>
+    <p class="text-lg opacity-90">Testing in real browsers, visual regression testing, and Playwright traces for increased reliability.</p>
+  </div>
 </div>
 
 <!-- <div v-click="4" class="mt-16 text-sm opacity-50"> -->
