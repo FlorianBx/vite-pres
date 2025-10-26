@@ -93,8 +93,10 @@ layout: full
   <div class="grid grid-cols-3 gap-8">
 
 <div class="relative flex flex-col items-center">
-  <div class="w-24 h-24 rounded-full bg-violet-500 bg-opacity-20 border-2 border-violet-500 flex items-center justify-center mb-6 relative z-10">
-    <img src="./public/assets/rollup-logo.svg" width="48" />
+  <div class="w-24 h-24 rounded-full border-2 border-violet-500 mb-6 relative z-10">
+    <div class="w-full h-full rounded-full flex items-center justify-center" style="background: linear-gradient(rgba(139, 92, 246, 0.2), rgba(139, 92, 246, 0.2)), #0f0f0f;">
+      <img src="./public/assets/rollup-logo.svg" width="48" />
+    </div>
   </div>
   <h3 class="text-xl font-bold text-violet-400">Rollup</h3>
   <p class="text-sm opacity-80 text-center font-semibold !mt-1">By Default</p>
@@ -102,8 +104,10 @@ layout: full
 </div>
 
 <div class="relative flex flex-col items-center">
-  <div class="mt--2 w-28 h-28 rounded-full bg-yellow-500 bg-opacity-20 border-2 border-yellow-500 flex items-center justify-center mb-6 relative z-10">
-    <img src="./public/assets/lightning-down.svg" width="48" />
+  <div class="mt--2 w-28 h-28 rounded-full border-2 border-yellow-500 mb-6 relative z-10">
+    <div class="w-full h-full rounded-full flex items-center justify-center" style="background: linear-gradient(rgba(234, 179, 8, 0.2), rgba(234, 179, 8, 0.2)), #0f0f0f;">
+      <img src="./public/assets/lightning-down.svg" width="48" />
+    </div>
   </div>
   <h3 class="text-xl font-bold text-yellow-400 text-center">Rolldown</h3>
   <p class="text-sm opacity-80 text-center font-semibold !mt-1">Optional</p>
@@ -111,8 +115,10 @@ layout: full
 </div>
 
 <div v-click="1" class="relative flex flex-col items-center">
-  <div class="mt--5 w-32 h-32 rounded-full bg-green-500 bg-opacity-30 border-3 border-green-400 flex items-center justify-center mb-6 relative z-10 shadow-lg shadow-green-500/50">
-    <img src="./public/assets/lightning-down.svg" width="56" />
+  <div class="mt--5 w-32 h-32 rounded-full border-3 border-green-400 mb-6 relative z-10 shadow-lg shadow-green-500/50">
+    <div class="w-full h-full rounded-full flex items-center justify-center" style="background: linear-gradient(rgba(34, 197, 94, 0.25), rgba(34, 197, 94, 0.25)), #0f0f0f;">
+      <img src="./public/assets/lightning-down.svg" width="56" />
+    </div>
   </div>
   <div class="absolute top--8 right-6 px-2 py-1 bg-green-500 rounded-full text-xs font-bold animate-pulse">
     NEW
