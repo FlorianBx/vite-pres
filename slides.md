@@ -43,7 +43,7 @@ For those unfamiliar with Vite, I'll quickly explain what it is, then we'll look
 -->
 
 ---
-layout: full 
+layout: full
 ---
 
 <div 
@@ -170,129 +170,99 @@ Cette transition progressive permet à l'écosystème de s'adapter en douceur. E
 
 ---
 layout: full
-class: text-center
-preload: flase
 ---
 
-# Our Rolldown Migration
-
-<div class="flex flex-col mt-16 space-y-12">
-
-<div class="w-full flex justify-around gap-8 items-center">
-<div class="text-6xl font-bold opacity-60">
-1 min 39s
-</div>
-
-<div v-click="1" class="text-7xl font-bold bg-gradient-to-r from-violet-400 to-yellow-400 bg-clip-text text-transparent animate-pulse">
-7s
-</div>
-</div>
-
-<div v-click="2" class="mt-20">
- <template v-if="$clicks === 2">
-  <AnimateNumber v-slot="{ number, target }" :value="97.4" :duration="500">
-    <div 
-        class="text-8xl font-mono font-bold text-gradient" 
-        :style="{ transform: `scale(${1 + (number / target / 4)})` }"
-    >
-        {{ number.toFixed(1).padStart(4, '0') }}%
+<div class="flex items-center justify-center h-full">
+  <div class="w-full max-w-6xl px-16">
+    <h2 v-hide class="text-center mb-16">Notre migration Rolldown</h2>
+    <div :class="$clicks >=4 ? 'scale-50' : 'scale-100'" class="relative">
+      <div class="flex justify-center items-center gap-16 mb-16">
+        <div v-click="1" class="flex flex-col items-center">
+          <div class="w-32 h-32 rounded-full bg-red-500 bg-opacity-20 border-2 border-red-500 flex items-center justify-center mb-6 relative z-10">
+            <img src="./public/assets/rollup-logo.svg" width="64" />
+          </div>
+          <h3 class="text-xl font-bold text-red-400 mb-3">Rollup</h3>
+          <div class="text-5xl font-bold opacity-80">
+            1:24
+          </div>
+          <p class="text-sm opacity-50 mt-2">minutes</p>
+        </div>
+        <div v-click="2" class="text-6xl opacity-40">
+          →
+        </div>
+        <div v-click="3" class="flex flex-col items-center">
+          <div class="w-36 h-36 rounded-full bg-yellow-500 bg-opacity-25 border-3 border-yellow-400 flex items-center justify-center mb-6 relative z-10 shadow-lg shadow-yellow-500/40">
+            <img src="./public/assets/lightning-down.svg" width="72" />
+          </div>
+          <h3 class="text-2xl font-bold text-yellow-400 mb-3">Rolldown</h3>
+          <div class="text-6xl font-bold bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">
+            8s
+          </div>
+          <p class="text-sm opacity-60 mt-2 font-semibold">secondes</p>
+        </div>
+      </div>
+      <div v-click="4" class="text-center mt-20">
+        <template v-if="$clicks >= 4">
+        <p>Moulining time reduced :</p>
+          <AnimateNumber v-slot="{ number, target }" :value="97.4" :duration="500">
+            <div
+              class="text-8xl font-mono font-bold bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent"
+              :style="{ transform: `scale(${1 + (number / target / 4)})` }"
+            >
+              {{ number.toFixed(1).padStart(4, '0') }}%
+            </div>
+          </AnimateNumber>
+        </template>
+      </div>
     </div>
-   </AnimateNumber>
-</template>
-</div>
-
+  </div>
 </div>
 
 <!--
 **SPEAKER NOTES - Slide 4 (45s)**
 
-So, we tested Rolldown on our codebase.
+Nous avons testé Rolldown sur notre codebase, et les résultats sont spectaculaires.
 
-Build time BEFORE: 1 minute 39 seconds.
+Temps de build AVANT avec Rollup : 1 minute 39 secondes.
 
-Build time AFTER: 7 seconds.
+Temps de build APRÈS avec Rolldown : 7 secondes.
 
-That's a 90% improvement in build times.
+Ça représente une réduction de 97.4% du temps de build.
 
-Concretely, what does this change?
+Concrètement, qu'est-ce que ça change ?
 
-For developers: you iterate faster. You make a change, you test, it's almost instantaneous.
+Pour les développeurs : vous itérez plus vite. Vous faites un changement, vous testez, c'est quasi instantané.
 
-For deployments: we save almost 2 minutes per build. Over a day with 50 deployments, that's 1.5 hours saved just on builds.
+Pour les déploiements : on économise presque 2 minutes par build. Sur une journée avec 50 déploiements, ça fait 1h30 économisées rien que sur les builds.
 
-And that's just with Rolldown. There's even better.
+Et ce n'est qu'avec Rolldown. Il y a encore mieux avec VitePlus.
 -->
 
 ---
-layout: center
+layout: full
 ---
 
-# VitePlus
-
-## The Unified JavaScript Toolchain
-
-<div class="mt-8 grid grid-cols-2 gap-8">
-
-<div class="text-left space-y-6">
-
-<div v-click="1">
-<h3 class="text-2xl font-bold text-violet-400 mb-3">Current Problem</h3>
-<ul class="text-lg space-y-2 opacity-90">
-<li>• Vite for builds</li>
-<li>• ESLint for linting</li>
-<li>• Prettier for formatting</li>
-<li>• Vitest for testing</li>
-</ul>
-<p class="text-sm opacity-60 mt-3">4 tools = 4 different configs</p>
-</div>
-
-</div>
-
-<div class="text-left space-y-6">
-
-<div v-click="2">
-<h3 class="text-2xl font-bold text-yellow-400 mb-3">The VitePlus Solution</h3>
-<ul class="text-lg space-y-2 opacity-90">
-<li>✨ <strong>All-in-one</strong> tool</li>
-<li>⚡️ Based on <strong>Oxc</strong> (Rust)</li>
-<li>🎯 Single configuration</li>
-<li>🚀 10-100x faster</li>
-</ul>
-</div>
-
-<div v-click="3" class="mt-8 p-4 bg-violet-500 bg-opacity-10 rounded-lg border border-violet-500 border-opacity-30">
-<p class="text-sm font-bold text-violet-300">viteplus.dev</p>
-<p class="text-xs opacity-70 mt-1">Public alpha · Q2 2025</p>
-</div>
-
-</div>
-
+<div class="flex items-center justify-center h-full">
+  <div class="text-center">
+    <div v-click="1" class="mb-8">
+      <img src="./public/assets/vite+.svg" class="h-32 mx-auto" />
+    </div>
+    <p v-click="2" class="text-xl opacity-70 font-light mt-12">
+      The Unified JavaScript Toolchain
+    </p>
+  </div>
 </div>
 
 <!--
-**SPEAKER NOTES - Slide 5 (60s)**
+**SPEAKER NOTES - Slide 5 (30s)**
 
-And now, the most important announcement from ViteConf: VitePlus.
+Et maintenant, l'annonce la plus importante de ViteConf : VitePlus.
 
-Today, for development, we use many different tools:
-- Vite to build the project
-- ESLint to check code quality
-- Prettier to format code
-- Vitest for tests
-Each with its configuration and way of working.
+VitePlus, c'est la vision d'unifier tous nos outils de développement JavaScript en un seul toolchain ultra-rapide.
 
-VitePlus is the vision of unifying everything into a single, ultra-fast tool.
+Aujourd'hui, nous utilisons de nombreux outils différents : Vite pour le build, ESLint pour le linting, Prettier pour le formatting, Vitest pour les tests... Chacun avec sa propre configuration.
 
-It's based on Oxc - a next-generation tooling suite written in Rust. Oxc includes notably OxLint and OxFmt, which replace ESLint and Prettier.
-
-The advantage? Imagine:
-- A single configuration instead of 4
-- A single tool to maintain
-- And most importantly: 10 to 100 times faster
-
-VitePlus will be in public alpha early 2025, and progressively it will become THE standard for JavaScript development.
-
-We're already testing Oxc components internally.
+VitePlus promet de tout regrouper en un seul outil. Voyons comment sur la slide suivante.
 -->
 
 ---
