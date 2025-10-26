@@ -46,62 +46,36 @@ For those unfamiliar with Vite, I'll quickly explain what it is, then we'll look
 layout: full
 ---
 
-<div 
+<div
   class="transition transition-500 mt-20 text-center scale-200"
   :class="$clicks > 0 && 'translate-x--90 scale-80 op80'"
 >
     <h2>What is Vite?</h2>
 </div>
 
-<div class="grid grid-cols-2 gap-12 mt-12 items-center">
-  <div class="text-left space-y-4">
-    <div v-click="1" class="flex items-start gap-4">
-      <img class="absolute right-0 top-0" src="./public/assets/fg.webp" />
-      <div class="flex items-center gap-4 mt--4">
-        <div class="text-4xl font-bold bg-gradient-to-r from-violet-400 to-yellow-400 bg-clip-text text-transparent">
-          ⚡️
-        </div>
-        <p class="text-xl opacity-90 w-100">An ultra-fast <strong>build tool</strong></p>
-      </div>
+<div class="mt-8 h-full">
+  <img class="absolute right-0 top-0" src="./public/assets/fg.webp" />
+  <div v-click="1" class="max-w-2xl">
+    <div class="border-l-5 border-violet-400 pl-6">
+      <p class="text-3xl font-light opacity-90" style="line-height: 40px;">
+        A build tool that serves code via native <strong>ESM</strong> during development and bundles with <strong>Rollup</strong> for production.
+      </p>
     </div>
   </div>
-
-  <div class="text-left space-y-4">
-    <div v-click="2" class="text-lg opacity-80 leading-relaxed">
-      <p>Like Webpack or Parcel, but <strong>much faster</strong>.</p>
-    </div>
-    <div v-click="3" class="text-lg opacity-80 leading-relaxed">
-      <p>It transforms and optimizes your JavaScript, TypeScript, Vue, React code, etc.</p>
-    </div>
-  </div>
-</div>
-
-<div v-click="4" class="text-left">
-
-```bash
-# Before Vite
-npm run dev → 45s ⏳
-
-# With Vite
-npm run dev → 1.2s ⚡️
-```
-
 </div>
 
 <!--
 **SPEAKER NOTES - Slide 2 (30s)**
 
-So Vite, to put it simply: it's a build tool.
+So, what is Vite?
 
-You know, the tools that take your source code and transform it to work in the browser. Like Webpack that some of you may know.
+Simply put: it's a build tool that serves your code via native ES modules during development, and bundles it with Rollup for production.
 
-The difference? Vite is MUCH faster.
+The key difference from traditional tools like Webpack is how it works in development. Instead of bundling everything upfront, Vite serves files directly using the browser's native ESM support. This makes the dev server start almost instantly.
 
-Concretely: where a project took 45 seconds to start in development, with Vite it's 1 second.
+For production, it uses Rollup - or the new Rolldown we'll talk about later - to create optimized bundles.
 
-This speed is what made it explode in adoption - today, it's become the standard for new web projects.
-
-And the announcements from this ViteConf make Vite even faster.
+That's Vite: native ESM for dev speed, bundled output for production efficiency.
 -->
 
 ---
@@ -111,40 +85,41 @@ layout: full
 <div class="flex items-center justify-center h-full">
   <div class="w-full max-w-6xl px-16">
 
-  <h2 class="text-center mb-20">La transition vers Rolldown</h2>
+  <h2 class="text-center mb-20">The Transition to Rolldown</h2>
 
 <div class="relative">
   <div class="absolute top-12 left-0 right-0 h-0.5 bg-gradient-to-r from-violet-500 via-yellow-500 to-green-500 opacity-30"></div>
 
   <div class="grid grid-cols-3 gap-8">
 
-<div v-click="1" class="relative flex flex-col items-center">
+<div class="relative flex flex-col items-center">
   <div class="w-24 h-24 rounded-full bg-violet-500 bg-opacity-20 border-2 border-violet-500 flex items-center justify-center mb-6 relative z-10">
     <img src="./public/assets/rollup-logo.svg" width="48" />
   </div>
-  <h3 class="text-xl font-bold text-violet-400 mb-2">Rollup</h3>
-  <p class="text-sm opacity-60 text-center">Aujourd'hui</p>
+  <h3 class="text-xl font-bold text-violet-400">Rollup</h3>
+  <p class="text-sm opacity-80 text-center font-semibold !mt-1">By Default</p>
+  <p class="text-sm opacity-60 text-center">Today</p>
 </div>
 
-<div v-click="2" class="relative flex flex-col items-center">
-  <div class="w-24 h-24 rounded-full bg-yellow-500 bg-opacity-20 border-2 border-yellow-500 flex items-center justify-center mb-6 relative z-10">
+<div class="relative flex flex-col items-center">
+  <div class="mt--2 w-28 h-28 rounded-full bg-yellow-500 bg-opacity-20 border-2 border-yellow-500 flex items-center justify-center mb-6 relative z-10">
     <img src="./public/assets/lightning-down.svg" width="48" />
   </div>
-  <h3 class="text-xl font-bold text-yellow-400 mb-2">Rolldown</h3>
-  <p class="text-sm opacity-80 text-center font-semibold">Optionnel</p>
-  <p class="text-sm opacity-60 text-center mt-1">Vite 6 · 2025</p>
+  <h3 class="text-xl font-bold text-yellow-400 text-center">Rolldown</h3>
+  <p class="text-sm opacity-80 text-center font-semibold !mt-1">Optional</p>
+  <p class="text-sm opacity-60 text-center !mt-3">Vite 6 · 2025</p>
 </div>
 
-<div v-click="3" class="relative flex flex-col items-center">
-  <div class="w-28 h-28 rounded-full bg-green-500 bg-opacity-30 border-3 border-green-400 flex items-center justify-center mb-6 relative z-10 shadow-lg shadow-green-500/50">
+<div v-click="1" class="relative flex flex-col items-center">
+  <div class="mt--5 w-32 h-32 rounded-full bg-green-500 bg-opacity-30 border-3 border-green-400 flex items-center justify-center mb-6 relative z-10 shadow-lg shadow-green-500/50">
     <img src="./public/assets/lightning-down.svg" width="56" />
   </div>
-  <div class="absolute top--2 right-4 px-2 py-1 bg-green-500 rounded-full text-xs font-bold animate-pulse">
+  <div class="absolute top--8 right-6 px-2 py-1 bg-green-500 rounded-full text-xs font-bold animate-pulse">
     NEW
   </div>
-  <h3 class="text-2xl font-bold text-green-400 mb-2">Rolldown</h3>
-  <p class="text-base opacity-90 text-center font-bold text-green-300">Par défaut</p>
-  <p class="text-sm opacity-70 text-center mt-1 font-semibold">Vite 8 · Q1 2026</p>
+  <h3 class="text-2xl font-bold text-green-400">Rolldown</h3>
+  <p class="text-sm opacity-90 text-center font-bold text-green-300 !mt-1">By Default</p>
+  <p class="text-sm opacity-70 text-center font-semibold !mt-2">Vite 8 · Q1 2026</p>
 </div>
 
   </div>
@@ -156,16 +131,16 @@ layout: full
 <!--
 **SPEAKER NOTES - Slide 3 (45s)**
 
-Première annonce majeure : la transition vers Rolldown.
+First major announcement: the transition to Rolldown.
 
-Rolldown est le nouveau bundler qui va remplacer Rollup dans Vite. C'est une réécriture complète en Rust pour des performances maximales.
+Rolldown is the new bundler that will replace Rollup in Vite. It's a complete rewrite in Rust for maximum performance.
 
-La migration se fera progressivement :
-- Aujourd'hui, Vite utilise Rollup, le bundler historique.
-- À partir de Vite 6 début 2025, Rolldown sera disponible en option pour ceux qui veulent tester.
-- Et à partir de Vite 8 au Q1 2026, Rolldown deviendra le choix par défaut.
+The migration will happen progressively:
+- Today, Vite uses Rollup, the historical bundler.
+- Starting with Vite 6 in early 2025, Rolldown will be available as an option for those who want to test it.
+- And starting with Vite 8 in Q1 2026, Rolldown will become the default choice.
 
-Cette transition progressive permet à l'écosystème de s'adapter en douceur. Et comme vous allez le voir sur la prochaine slide, les gains de performance sont spectaculaires.
+This progressive transition allows the ecosystem to adapt smoothly. And as you'll see on the next slide, the performance gains are spectacular.
 -->
 
 ---
@@ -174,8 +149,8 @@ layout: full
 
 <div class="flex items-center justify-center h-full">
   <div class="w-full max-w-6xl px-16">
-    <h2 v-hide class="text-center mb-16">Notre migration Rolldown</h2>
-    <div :class="$clicks >=4 ? 'scale-50' : 'scale-100'" class="relative">
+    <h2 v-hide class="text-center mb-16">Our Rolldown Migration</h2>
+    <div :class="$clicks >= 3 ? 'scale-50' : 'scale-100'" class="relative">
       <div class="flex justify-center items-center gap-16 mb-16">
         <div v-click="1" class="flex flex-col items-center">
           <div class="w-32 h-32 rounded-full bg-red-500 bg-opacity-20 border-2 border-red-500 flex items-center justify-center mb-6 relative z-10">
@@ -190,20 +165,20 @@ layout: full
         <div v-click="2" class="text-6xl opacity-40">
           →
         </div>
-        <div v-click="3" class="flex flex-col items-center">
-          <div class="w-36 h-36 rounded-full bg-yellow-500 bg-opacity-25 border-3 border-yellow-400 flex items-center justify-center mb-6 relative z-10 shadow-lg shadow-yellow-500/40">
+        <div v-click="2" class="flex flex-col items-center">
+          <div class="w-34 h-34 rounded-full bg-yellow-500 bg-opacity-25 border-3 border-yellow-400 flex items-center justify-center mb-6 relative z-10 shadow-lg shadow-yellow-500/40">
             <img src="./public/assets/lightning-down.svg" width="72" />
           </div>
           <h3 class="text-2xl font-bold text-yellow-400 mb-3">Rolldown</h3>
-          <div class="text-6xl font-bold bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">
+          <div class="mt--1 text-5xl font-bold bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">
             8s
           </div>
-          <p class="text-sm opacity-60 mt-2 font-semibold">secondes</p>
+          <p class="text-sm opacity-60 mt-2 font-semibold">seconds</p>
         </div>
       </div>
-      <div v-click="4" class="text-center mt-20">
-        <template v-if="$clicks >= 4">
-        <p>Moulining time reduced :</p>
+      <div v-click="3" class="text-center mt-20">
+        <template v-if="$clicks >= 3">
+        <p>Build time reduced:</p>
           <AnimateNumber v-slot="{ number, target }" :value="97.4" :duration="500">
             <div
               class="text-8xl font-mono font-bold bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent"
@@ -221,21 +196,21 @@ layout: full
 <!--
 **SPEAKER NOTES - Slide 4 (45s)**
 
-Nous avons testé Rolldown sur notre codebase, et les résultats sont spectaculaires.
+We tested Rolldown on our codebase, and the results are spectacular.
 
-Temps de build AVANT avec Rollup : 1 minute 39 secondes.
+Build time BEFORE with Rollup: 1 minute 24 seconds.
 
-Temps de build APRÈS avec Rolldown : 7 secondes.
+Build time AFTER with Rolldown: 8 seconds.
 
-Ça représente une réduction de 97.4% du temps de build.
+That represents a 97.4% reduction in build time.
 
-Concrètement, qu'est-ce que ça change ?
+Concretely, what does this change?
 
-Pour les développeurs : vous itérez plus vite. Vous faites un changement, vous testez, c'est quasi instantané.
+For developers: you iterate faster. You make a change, you test, it's almost instantaneous.
 
-Pour les déploiements : on économise presque 2 minutes par build. Sur une journée avec 50 déploiements, ça fait 1h30 économisées rien que sur les builds.
+For deployments: we save almost 1.5 minutes per build. Over a day with 50 deployments, that's over an hour saved just on builds.
 
-Et ce n'est qu'avec Rolldown. Il y a encore mieux avec VitePlus.
+And that's just with Rolldown. There's even better with VitePlus.
 -->
 
 ---
@@ -256,13 +231,37 @@ layout: full
 <!--
 **SPEAKER NOTES - Slide 5 (30s)**
 
-Et maintenant, l'annonce la plus importante de ViteConf : VitePlus.
+And now, the most important announcement from ViteConf: VitePlus.
 
-VitePlus, c'est la vision d'unifier tous nos outils de développement JavaScript en un seul toolchain ultra-rapide.
+VitePlus is the vision of unifying all our JavaScript development tools into a single ultra-fast toolchain.
 
-Aujourd'hui, nous utilisons de nombreux outils différents : Vite pour le build, ESLint pour le linting, Prettier pour le formatting, Vitest pour les tests... Chacun avec sa propre configuration.
+Today, we use many different tools: Vite for building, ESLint for linting, Prettier for formatting, Vitest for testing... Each with its own configuration.
 
-VitePlus promet de tout regrouper en un seul outil. Voyons comment sur la slide suivante.
+VitePlus promises to bring everything together in one tool. Let's see how on the next slide.
+-->
+
+---
+layout: full
+---
+
+<IframeSlide url="https://viteplus.dev/#feature-dev-build" />
+
+<!--
+**SPEAKER NOTES - Slide 6 (60s)**
+
+Here's the official VitePlus documentation which explains the concept very well.
+
+[Browse the page to show key points]
+
+As you can see, VitePlus unifies all the tools:
+- Build with Vite/Rolldown
+- Linting with OxLint
+- Formatting with OxFmt
+- Testing with Vitest
+
+All of this in a single tool, a single configuration, and 10 to 100 times better performance.
+
+This is truly the future of JavaScript development.
 -->
 
 ---
@@ -279,14 +278,14 @@ class: text-center
 <div>
 <p class="text-sm opacity-60 uppercase tracking-wider mb-4">ESLint</p>
 <div class="text-7xl font-bold opacity-40">
-8.3s
+48.3s
 </div>
 </div>
 
 <div v-click="1">
 <p class="text-sm opacity-60 uppercase tracking-wider mb-4">OxLint</p>
 <div class="text-7xl font-bold bg-gradient-to-r from-green-400 to-yellow-400 bg-clip-text text-transparent">
-0.2s
+3.2s
 </div>
 </div>
 
@@ -319,6 +318,65 @@ For CI: we can lint more often without slowing down pipelines.
 And OxLint detects more issues than ESLint - it implements TypeScript ESLint rules natively.
 
 Same for OxFmt which replaces Prettier: same performance difference.
+-->
+
+---
+layout: full
+---
+
+<div class="flex items-center justify-center h-full px-16">
+  <div class="grid grid-cols-2 gap-16 items-center w-full max-w-6xl">
+    <div class="space-y-8">
+      <h2 class="text-4xl font-bold mb-8">Vitest Browser Mode</h2>
+      <div class="space-y-4">
+        <div class="flex items-start gap-4">
+          <div class="text-3xl">🎉</div>
+          <div>
+            <h3 class="text-xl font-bold text-green-400 mb-2">Browser Mode is Stable</h3>
+            <p class="text-base opacity-80">Test in real browsers, no more JSDOM needed.</p>
+          </div>
+        </div>
+      </div>
+      <div class="space-y-4">
+        <div class="flex items-start gap-4">
+          <div class="text-3xl">🔍</div>
+          <div>
+            <h3 class="text-xl font-bold text-blue-400 mb-2">Visual Regression Testing</h3>
+            <p class="text-base opacity-80">Visually compare your components, built-in natively in Browser Mode.</p>
+          </div>
+        </div>
+      </div>
+      <div class="space-y-4">
+        <div class="flex items-start gap-4">
+          <div class="text-3xl">🎭</div>
+          <div>
+            <h3 class="text-xl font-bold text-purple-400 mb-2">Playwright Traces Support</h3>
+            <p class="text-base opacity-80">Advanced debugging with Playwright traces to easily diagnose failures.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex items-center justify-center">
+      <img src="/assets/vitest-browser.png" class="w-full rounded-lg shadow-2xl" alt="Vitest Browser Mode" />
+    </div>
+
+  </div>
+</div>
+
+<!--
+**SPEAKER NOTES - Slide 8 (45s)**
+
+Another major announcement from ViteConf: Vitest Browser Mode is now stable.
+
+What does this change?
+
+First point: Browser Mode is out of experimental with Vitest 4.0 released in October. You can now test your components in real browsers instead of JSDOM which simulates the browser. It's much more reliable.
+
+Second point: Visual Regression Testing built-in. You can visually compare your components to automatically detect unwanted changes.
+
+Third point: Playwright Traces support. When a test fails, you have access to complete traces to understand exactly what happened.
+
+It's a game changer for front-end testing.
 -->
 
 ---
