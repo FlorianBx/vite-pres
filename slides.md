@@ -67,8 +67,7 @@ layout: full
 <!--
 **SPEAKER NOTES - Slide 2 (30s)**
 
-So, what is Vite?
-
+Let's talk about Vite ! n
 Simply put: it's a build tool that serves your code via native ES modules during development, and bundles it with Rollup for production.
 
 The key difference from traditional tools like Webpack is how it works in development. Instead of bundling everything upfront, Vite serves files directly using the browser's native ESM support. This makes the dev server start almost instantly.
@@ -143,7 +142,7 @@ Rolldown is the new bundler that will replace Rollup in Vite. It's a complete re
 
 The migration will happen progressively:
 - Today, Vite uses Rollup, the historical bundler.
-- Starting with Vite 6 in early 2025, Rolldown will be available as an option for those who want to test it.
+- Starting with Vite 6, which was released in early 2025, Rolldown will be available as an option for those who want to test it.
 - And starting with Vite 8 in Q1 2026, Rolldown will become the default choice.
 
 This progressive transition allows the ecosystem to adapt smoothly. And as you'll see on the next slide, the performance gains are spectacular.
