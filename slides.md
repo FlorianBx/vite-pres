@@ -35,11 +35,11 @@ Vite News Summary · October 2025
 </div>
 
 <!--
-**SPEAKER NOTES - Slide 1 (30s)**
+**SPEAKER NOTES - Slide 1 (25s)**
 
-Hello everyone! Three weeks ago, I had the opportunity to attend ViteConf.
+Hi everyone! Three weeks ago, I had the chance to attend ViteConf.
 
-For those unfamiliar with Vite, I'll quickly explain what it is, then we'll look at the major announcements that will impact how we develop in the coming months.
+For those who don't know Vite, I'll quickly explain what it is. Then we'll look at the major announcements that will change how we develop in the coming months.
 -->
 
 ---
@@ -65,17 +65,19 @@ layout: full
 </div>
 
 <!--
-**SPEAKER NOTES - Slide 2 (30s)**
+**SPEAKER NOTES - Slide 2 (25s)**
 
-Let's talk about Vite ! n
-Simply put: it's a build tool that serves your code via native ES modules during development, and bundles it with Rollup for production.
+  So, what's Vite?
 
-The key difference from traditional tools like Webpack is how it works in development. Instead of bundling everything upfront, Vite serves files directly using the browser's native ESM support. This makes the dev server start almost instantly.
+  Simply put: it's a build tool.
 
-For production, it uses Rollup - or the new Rolldown we'll talk about later - to create optimized bundles.
+  During development, it serves your code directly using native ES modules. No bundling upfront. That's why the dev server starts instantly.
 
-That's Vite: native ESM for dev speed, bundled output for production efficiency.
--->
+  For production, it bundles everything with Rollup for optimized delivery.
+
+  Fast dev, optimized builds. That's Vite.
+
+  -->
 
 ---
 layout: full
@@ -110,7 +112,7 @@ layout: full
   </div>
   <h3 class="text-xl font-bold text-yellow-400 text-center">Rolldown</h3>
   <p class="text-sm opacity-80 text-center font-semibold !mt-1">Optional</p>
-  <p class="text-sm opacity-60 text-center !mt-3">Vite 6 · 2025</p>
+  <p class="text-sm opacity-60 text-center !mt-3">Vite 7 · June 2025</p>
 </div>
 
 <div v-click="1" class="relative flex flex-col items-center">
@@ -134,18 +136,15 @@ layout: full
 </div>
 
 <!--
-**SPEAKER NOTES - Slide 3 (45s)**
+**SPEAKER NOTES - Slide 3 (35s)**
 
-First major announcement: the transition to Rolldown.
+ First major announcement: Rolldown.
 
-Rolldown is the new bundler that will replace Rollup in Vite. It's a complete rewrite in Rust for maximum performance.
+  It's Vite's new bundler, replacing Rollup. Complete rewrite in Rust for max performance.
 
-The migration will happen progressively:
-- Today, Vite uses Rollup, the historical bundler.
-- Starting with Vite 6, which was released in early 2025, Rolldown will be available as an option for those who want to test it.
-- And starting with Vite 8 in Q1 2026, Rolldown will become the default choice.
+  So how's the migration happening? Well, today Vite still uses Rollup. Then in June this year, Vite 7 came out with Rolldown as an experimental option. And next year in Q1, Vite 8 will make it the default.
 
-This progressive transition allows the ecosystem to adapt smoothly. And as you'll see on the next slide, the performance gains are spectacular.
+  The performance gains? Massive. Let me show you.
 -->
 
 ---
@@ -154,7 +153,7 @@ layout: full
 
 <div class="flex items-center justify-center h-full">
   <div class="w-full max-w-6xl px-16">
-    <h2 class="text-center">Benchmark on DT_Main</h2>
+    <h2 class="text-center">Benchmark on DT_Main (build time)</h2>
     <p class="opacity-50 text-center">On a M4 computer</p>
     <div class="flex justify-center items-center gap-16">
       <div class="flex flex-col items-center">
@@ -169,7 +168,7 @@ layout: full
         </div>
         <p class="text-sm opacity-50 mt-2">minutes</p>
       </div>
-      <div class="text-6xl opacity-40">
+      <div v-click="1" class="text-6xl opacity-40">
         →
       </div>
       <div v-click="1" class="flex flex-col items-center">
@@ -189,15 +188,14 @@ layout: full
 </div>
 
 <!--
-**SPEAKER NOTES - Slide 4 (30s)**
+**SPEAKER NOTES - Slide 4 (20s)**
 
-We tested Rolldown on our codebase. Let me show you the real-world impact.
+I tested this on our codebase.
 
-Build time BEFORE with Rollup: 1 minute 24 seconds.
+  Rollup took 1 minute 24 seconds.
+  Rolldown? 8 seconds.
 
-Build time AFTER with Rolldown: 8 seconds.
-
-Let me show you what that represents in terms of performance gain on the next slide.
+  Let me show you the impact.
 -->
 
 ---
@@ -223,15 +221,13 @@ preload: false
 <!--
 **SPEAKER NOTES - Slide 5 (20s)**
 
-That's a 97.4% reduction in build time.
+That's 90% faster. A minute down to 8 seconds.
 
-Think about it: from over a minute to 8 seconds. That's the power of Rolldown.
+  What does that mean? CI runs faster. Less waiting. And you probably save a polar bear with each build!
 
-For developers: you iterate faster. Changes appear almost instantly.
+  Not sure about the last one, but it's pretty cool anyway.
 
-For deployments: we save over a minute per build. With 50 deployments a day, that's nearly an hour saved just on builds.
-
-And that's just Rolldown. There's even better coming with VitePlus.
+  Now, let's talk about the next big thing!
 -->
 ---
 layout: full
@@ -250,15 +246,15 @@ preload: false
 </div>
 
 <!--
-**SPEAKER NOTES - Slide 5 (30s)**
+**SPEAKER NOTES - Slide 5bis (25s)**
 
-And now, the most important announcement from ViteConf: VitePlus.
+  VitePlus.
 
-VitePlus is the vision of unifying all our JavaScript development tools into a single ultra-fast toolchain.
+  It unifies all our JavaScript dev tools into a single toolchain.
 
-Today, we use many different tools: Vite for building, ESLint for linting, Prettier for formatting, Vitest for testing... Each with its own configuration.
+  Today we juggle multiple tools: Vite, ESLint, Prettier, Vitest... Each with its own config.
 
-VitePlus promises to bring everything together in one tool. Let's see how on the next slide.
+  VitePlus brings it all together. Let me show you.
 -->
 
 ---
@@ -268,21 +264,23 @@ layout: full
 <IframeSlide url="https://viteplus.dev/#feature-dev-build" />
 
 <!--
-**SPEAKER NOTES - Slide 6 (60s)**
+**SPEAKER NOTES - Slide 6 (45s)**
 
-Here's the official VitePlus documentation which explains the concept very well.
+  Here's the VitePlus documentation.
 
-[Browse the page to show key points]
+  [Browse the page briefly]
 
-As you can see, VitePlus unifies all the tools:
-- Build with Vite/Rolldown
-- Linting with OxLint
-- Formatting with OxFmt
-- Testing with Vitest
+  So what does it unify?
+  Build with Rolldown.
+  Testing with Vitest.
+  Linting with OxLint.
+  Formatting with OxFmt. This one's still in development and should be available soon.
+  And monorepo task running with intelligent caching. No config needed, it just works.
+  
 
-All of this in a single tool, a single configuration, and 10 to 100 times better performance.
+  One tool, one config. 10 to 100 times faster.
 
-This is truly the future of JavaScript development.
+  It's free for open source and individuals. But for companies, well, you guessed it: not free. Evan hasn't shared pricing details yet though.
 -->
 
 ---
@@ -312,25 +310,17 @@ class: text-center
 </div>
 
 <!--
-**SPEAKER NOTES - Slide 6 (45s)**
+**SPEAKER NOTES - Slide 6bis (30s)**
 
-So, OxLint is the modern replacement for ESLint. We tested it on our code.
+  Now let's dive into OxLint. I tested it on our code.
 
-Results:
-- ESLint took 8.3 seconds to analyze our code
-- OxLint: 0.2 seconds
+  Results:
+  ESLint: 48 seconds.
+  OxLint: 3 seconds.
 
-That's 41 times faster.
-
-Why does it matter?
-
-For developers: your editor shows errors in real-time, without lag.
-
-For CI: we can lint more often without slowing down pipelines.
-
-And OxLint detects more issues than ESLint - it implements TypeScript ESLint rules natively.
-
-Same for OxFmt which replaces Prettier: same performance difference.
+  That's impressive, right? But actually, it's kind of cheating! OxLint can't parse everything in Vue files at the moment, and it has fewer rules than ESLint. But all these things will be fixed. 
+  
+  OxLint will probably become the default linter pretty soon.
 -->
 
 ---
@@ -377,19 +367,19 @@ layout: full
 </div>
 
 <!--
-**SPEAKER NOTES - Slide 8 (45s)**
+**SPEAKER NOTES - Slide 8 (35s)**
 
-Another major announcement from ViteConf: Vitest Browser Mode is now stable.
+  Another major announcement: Vitest Browser Mode is now stable.
 
-What does this change?
+  Full disclosure: I haven't tested this yet. But here are the key features.
 
-First point: Browser Mode is out of experimental with Vitest 4.0 released in October. You can now test your components in real browsers instead of JSDOM which simulates the browser. It's much more reliable.
+  First: Browser Mode is stable with Vitest 4 released in October. You can now test in real browsers.
 
-Second point: Visual Regression Testing built-in. You can visually compare your components to automatically detect unwanted changes.
+  Second: Visual Regression Testing built-in. You can visually compare components to detect unwanted changes. By the way, shoutout to our QA team — they've already built something similar with Python for our design system, and it's been working great.
 
-Third point: Playwright Traces support. When a test fails, you have access to complete traces to understand exactly what happened.
+  Third: Playwright Traces support. When a test fails, you get complete traces to understand what happened.
 
-It's a game changer for front-end testing.
+  Pretty cool stuff for front-end testing.
 -->
 
 ---
@@ -418,17 +408,17 @@ Key Takeaways
 <!-- </div> -->
 
 <!--
-**SPEAKER NOTES - Slide 8 (30s)**
+**SPEAKER NOTES - Slide 8bis (25s)**
 
-So, to summarize in 3 points:
+  So, quick recap:
 
-1. ROLLDOWN: Vite's new core, written in Rust, which divides our build times by 10. It's available from early 2025.
+  Rolldown: Vite's new core in Rust. 90% faster builds. Released in June.
 
-2. VITEPLUS: the vision of a unified toolchain that replaces all our current tools. Based on Oxc, 10 to 100 times faster. Public alpha mid-2025.
+  VitePlus: One tool for everything. Up to 100 times faster. Coming soon.
 
-3. FOR US: we'll migrate progressively, we already have measured gains on our codebase, and it will directly improve our daily development experience.
+  What does this mean for us? We'll migrate step by step. We've already seen the gains on our codebase. It's going to make our dev workflow way smoother.
 
-The JavaScript ecosystem is entering a new era of performance thanks to Rust. It's a major paradigm shift.
+  So yeah, JavaScript tooling is getting a massive performance boost thanks to Rust.
 
-Thank you for your attention. Any questions?
+  Thanks for listening!
 -->
