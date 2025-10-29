@@ -265,19 +265,9 @@ layout: full
 
 <!--
 **SPEAKER NOTES - Slide 6 (45s)**
+So, what does VitePlus unify? It unifies building with Rolldown, testing with Vitest, linting with oxlint, and formatting with oxfmt. This one is still in development, but it should be available soon. And the big one, the monorepo, task running with intelligent caching. It's a direct concurrent to Turborepo. No config needed, it just works. 
 
-  Here's the VitePlus documentation.
-
-  [Browse the page briefly]
-
-  So what does it unify?
-  Build with Rolldown.
-  Testing with Vitest.
-  Linting with OxLint.
-  Formatting with OxFmt. This one is still in development and should be available soon.
-  And monorepo task running with intelligent caching. No config needed, it just works.
-
-  It's free for open source and individuals. Companies will have to pay. Evan hasn't shared pricing details yet, but he will soon...
+It's free for open source and individuals. Companies will have to pay. Evan has not shared the pricing details yet, but he will soon
 -->
 
 ---
