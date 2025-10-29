@@ -254,7 +254,7 @@ preload: false
 
 Today we use many different tools: Vite, ESLint, Prettier, Vitest... Each with its own configuration..
 
-  VitePlus brings it all together. Let me show you.
+  VitePlus brings it all together and Here's the result.
 -->
 
 ---
@@ -276,9 +276,6 @@ layout: full
   Linting with OxLint.
   Formatting with OxFmt. This one is still in development and should be available soon.
   And monorepo task running with intelligent caching. No config needed, it just works.
-  
-
-  One tool, one config. 10 to 100 times faster.
 
   It's free for open source and individuals. Companies will have to pay. Evan hasn't shared pricing details yet, but he will soon...
 -->
