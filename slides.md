@@ -355,7 +355,7 @@ layout: full
 <!--
 **SPEAKER NOTES - Slide 8 (35s)**
 
-  Another major announcement: Vitest Browser Mode is now stable.
+  And the last major announcement: is about Vitest Browser Mode
 
   Full disclosure: I haven't tested this yet. But here are the key features.
 
