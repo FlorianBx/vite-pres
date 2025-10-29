@@ -396,15 +396,15 @@ Key Takeaways
 <!--
 **SPEAKER NOTES - Slide 8bis (25s)**
 
-  So, quick recap:
+ To recap,
+ 
+- Rolldown, the new Rust bundler, makes builds 90% faster, which we've already seen the benefits of on our codebase. It was released in June. 
 
-  Rolldown: Vite's new core in Rust. 90% faster builds. Released in June.
+- VitePlus is a single tool for everything, up to 100 times faster. Coming soon. 
+  
+So yeah, JavaScript tooling is getting a massive performance boost thanks to Rust. 
 
-  VitePlus: One tool for everything. Up to 100 times faster. Coming soon.
+and
 
-  What does this mean for us? We'll migrate step by step. We've already seen the gains on our codebase. It's going to make our dev workflow way smoother.
-
-  So yeah, JavaScript tooling is getting a massive performance boost thanks to Rust.
-
-  Thanks for listening!
+Thanks for listening!
 -->
