@@ -389,10 +389,6 @@ Key Takeaways
   </div>
 </div>
 
-<!-- <div v-click="4" class="mt-16 text-sm opacity-50"> -->
-<!-- Questions? -->
-<!-- </div> -->
-
 <!--
 **SPEAKER NOTES - Slide 8bis (25s)**
 
