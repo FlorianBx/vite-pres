@@ -394,7 +394,7 @@ Key Takeaways
 
  To recap,
  
-- Rolldown, the new Rust bundler, makes builds 90% faster, which we've already seen the benefits of on our codebase. It was released in June. 
+- Rolldown, the new Rust bundler, makes builds 90% faster, which we've already seen the benefits of on our codebase. 
 
 - VitePlus is a single tool for everything, up to 100 times faster. Coming soon. 
   
