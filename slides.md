@@ -190,7 +190,7 @@ layout: full
 <!--
 **SPEAKER NOTES - Slide 4 (20s)**
 
-I tested this on our codebase.
+This benchmark was done on our codebase.
 
   Rollup took 1 minute 24 seconds.
   Rolldown? 8 seconds.
