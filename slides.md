@@ -55,7 +55,7 @@ layout: full
 
 <div class="mt-8 h-full">
   <img class="absolute right-0 top-0" src="./public/assets/fg.webp" />
-  <div v-click="1" class="max-w-2xl">
+  <div class="max-w-2xl">
     <div class="border-l-5 border-violet-400 pl-6">
       <p class="text-3xl font-light opacity-90" style="line-height: 40px;">
         A build tool that serves code via native <strong>ESM</strong> during development and bundles with <strong>Rollup</strong> for production.
