@@ -301,7 +301,7 @@ class: text-center
 
 Now let's dive into OxLint. I tested it on our code and found that ESLint took 48 seconds, while OxLint took only 3 seconds. That's quite impressive. 
 
-But actually, it's kind of cheating! OxLint can't parse everything in Vue files at the moment, and it has fewer rules than ESLint. 
+But actually, it's kind of cheating! OxLint can't parse everything in Vue files at the moment, and it uses fewer rules.
 
 But these things will be resolved, and OxLint will probably become the default linter soon.
 -->
