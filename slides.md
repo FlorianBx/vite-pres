@@ -290,7 +290,7 @@ class: text-center
 </div>
 </div>
 
-<div v-click="1">
+<div>
 <p class="text-sm opacity-60 uppercase tracking-wider mb-4">OxLint</p>
 <div class="text-7xl font-bold bg-gradient-to-r from-green-400 to-yellow-400 bg-clip-text text-transparent">
 3.2s
