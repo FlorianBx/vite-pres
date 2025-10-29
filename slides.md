@@ -250,7 +250,7 @@ preload: false
 
 Today, we use many different tools like Vite, ESLint, Prettier, and Vitest, each with its own configuration. 
 
-VitePlus simplifies things by combining all these tools into a single, unified toolchain.
+VitePlus simplifies things by combining all these tools into a single unified toolchain.
 -->
 
 ---
@@ -268,7 +268,7 @@ It unifies building with Rolldown, testing with Vitest, linting with oxlint, and
 
 This one is still in development, but it should be available soon. 
 
-And the big one, the monorepo, with task running with intelligent caching. It's a direct competitor to Turbo repo, with no configuration needed and it just works. 
+And the big one, the monorepo, with task running with intelligent caching. It's a direct competitor to Turbo repo and NX, with no configuration needed and it just works. 
 
 It's free for open source and individuals. Companies will have to pay, and Evan has not shared the pricing details yet, but he will soon.
 -->
@@ -361,7 +361,7 @@ layout: full
 
   First: Browser Mode is stable with Vitest 4 released in October. You can now test in real browsers.
 
-  Second: Visual Regression Testing built-in. You can visually compare components to detect unwanted changes. By the way, shoutout to our QA team — they've already built something similar with Python for our design system, and it's been working great.
+  Second: Visual Regression Testing built-in. You can visually compare components to detect unwanted changes. By the way, shoutout to our QA team — they've already built something similar with Python if I'm remember well, for our design system, and it's working great.
 
   Third: Playwright Traces support. When a test fails, you get complete traces to understand what happened.
 
