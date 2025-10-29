@@ -138,11 +138,11 @@ layout: full
 <!--
 **SPEAKER NOTES - Slide 3 (35s)**
 
- First major announcement: Rolldown.
+ First major announcement is Rolldown.
 
   It's Vite's new bundler, replacing Rollup. Complete rewrite in Rust for max performance.
 
-  So how's the migration happening? Well, today Vite still uses Rollup. Then in June this year, Vite 7 came out with Rolldown as an experimental option. And next year in Q1, Vite 8 will make it the default.
+  Moving on to the migration timeline. Today, Vite still uses Rollup, with Rolldown being an experimental option in Vite 7, and becoming the default in Vite 8 in Q1 next year.
 
   The performance gain is significant. Let me show you.
 -->
