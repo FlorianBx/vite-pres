@@ -248,13 +248,9 @@ preload: false
 <!--
 **SPEAKER NOTES - Slide 5bis (25s)**
 
-  VitePlus.
+Today, we use many different tools like Vite, ESLint, Prettier, and Vitest, each with its own configuration. 
 
-  It unifies all our JavaScript dev tools into a single toolchain.
-
-Today we use many different tools: Vite, ESLint, Prettier, Vitest... Each with its own configuration..
-
-  VitePlus brings it all together and Here's the result.
+VitePlus simplifies things by combining all these tools into a single, unified toolchain.
 -->
 
 ---
