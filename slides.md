@@ -115,7 +115,7 @@ layout: full
   <p class="text-sm opacity-60 text-center !mt-3">Vite 7 · June 2025</p>
 </div>
 
-<div v-click="1" class="relative flex flex-col items-center">
+<div class="relative flex flex-col items-center">
   <div class="mt--5 w-32 h-32 rounded-full border-3 border-green-400 mb-6 relative z-10 shadow-lg shadow-green-500/50">
     <div class="w-full h-full rounded-full flex items-center justify-center" style="background: linear-gradient(rgba(34, 197, 94, 0.25), rgba(34, 197, 94, 0.25)), #0f0f0f;">
       <img src="./public/assets/lightning-down.svg" width="56" />
@@ -309,7 +309,11 @@ class: text-center
 <!--
 **SPEAKER NOTES - Slide 6bis (30s)**
 
-Now let's dive into OxLint. I tested it on our code and found that ESLint took 48 seconds, while OxLint took only 3 seconds. That's quite impressive. But actually, it's kind of cheating! OxLint can't parse everything in Vue files at the moment, and it has fewer rules than ESLint. But all these things will be fixed soon. OxLint will probably become the default linter pretty soon.
+Now let's dive into OxLint. I tested it on our code and found that ESLint took 48 seconds, while OxLint took only 3 seconds. That's quite impressive. 
+
+But actually, it's kind of cheating! OxLint can't parse everything in Vue files at the moment, and it has fewer rules than ESLint. 
+
+But these things will be resolved, and OxLint will probably become the default linter soon.
 -->
 
 ---
