@@ -280,7 +280,7 @@ layout: full
 
   One tool, one config. 10 to 100 times faster.
 
-  It's free for open source and individuals. But for companies, well, you guessed it: not free. Evan has not shared pricing details, but will soon.
+  It's free for open source and individuals. Companies will have to pay. Evan hasn't shared pricing details yet, but he will soon...
 -->
 
 ---
