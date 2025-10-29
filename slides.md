@@ -144,7 +144,7 @@ layout: full
 
   So how's the migration happening? Well, today Vite still uses Rollup. Then in June this year, Vite 7 came out with Rolldown as an experimental option. And next year in Q1, Vite 8 will make it the default.
 
-  The performance gains? Massive. Let me show you.
+  The performance gain is significant. Let me show you.
 -->
 
 ---
@@ -190,12 +190,12 @@ layout: full
 <!--
 **SPEAKER NOTES - Slide 4 (20s)**
 
-This benchmark was done on our codebase.
+I made a benchmark on our codebase.
 
-  Rollup took 1 minute 24 seconds.
-  Rolldown? 8 seconds.
+  Rollup took 1 minute 24 seconds to build DT_Main and
+  Rolldown only 8 seconds.
 
-  Let me show you the impact.
+  The impact of this is ?
 -->
 
 ---
