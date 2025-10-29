@@ -274,13 +274,13 @@ layout: full
   Build with Rolldown.
   Testing with Vitest.
   Linting with OxLint.
-  Formatting with OxFmt. This one's still in development and should be available soon.
+  Formatting with OxFmt. This one is still in development and should be available soon.
   And monorepo task running with intelligent caching. No config needed, it just works.
   
 
   One tool, one config. 10 to 100 times faster.
 
-  It's free for open source and individuals. But for companies, well, you guessed it: not free. Evan hasn't shared pricing details yet though.
+  It's free for open source and individuals. But for companies, well, you guessed it: not free. Evan has not shared pricing details, but will soon.
 -->
 
 ---
@@ -312,15 +312,7 @@ class: text-center
 <!--
 **SPEAKER NOTES - Slide 6bis (30s)**
 
-  Now let's dive into OxLint. I tested it on our code.
-
-  Results:
-  ESLint: 48 seconds.
-  OxLint: 3 seconds.
-
-  That's impressive, right? But actually, it's kind of cheating! OxLint can't parse everything in Vue files at the moment, and it has fewer rules than ESLint. But all these things will be fixed. 
-  
-  OxLint will probably become the default linter pretty soon.
+Now let's dive into OxLint. I tested it on our code and found that ESLint took 48 seconds, while OxLint took only 3 seconds. That's really impressive, right? But actually, it's kind of cheating! OxLint can't parse everything in Vue files at the moment, and it has fewer rules than ESLint. But all these things will be fixed soon. OxLint will probably become the default linter pretty soon.
 -->
 
 ---
