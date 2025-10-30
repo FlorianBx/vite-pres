@@ -10,7 +10,7 @@ layout: full
 title: ViteConf 2025 - Key Takeaways
 mdc: true
 fonts:
-  sans: "Inter"
+  sans: "Robot"
   mono: "Fira Code"
 # slide transition: https://sli.dev/guide/animations.html#slide-transitions
 #transition: slide-left
@@ -179,7 +179,7 @@ layout: full
         </div>
         <h3 class="text-2xl font-bold text-yellow-400 mb-3">Rolldown</h3>
         <div class="text-5xl font-bold bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent animate-pulse">
-          8s
+          8
         </div>
         <p class="text-sm opacity-60 mt-2 font-semibold">seconds</p>
       </div>
@@ -278,8 +278,8 @@ layout: center
 class: text-center
 ---
 
-<h2 class="text-center mt--12">Benchmark on DT_Main</h2>
-<p class="opacity-50 text-center">On a M4 computer</p>
+<h2 class="mt--12">Benchmark on DT_Main</h2>
+<i class="opacity-50 text-center">On a M4 computer</i>
 
 <div class="mt-12 grid grid-cols-2 gap-16 max-w-4xl mx-auto">
 
@@ -316,31 +316,31 @@ layout: full
 <div class="flex items-center justify-center h-full px-16">
   <div class="grid grid-cols-3 gap-16 items-center w-full max-w-6xl">
     <div class="space-y-8 col-span-2">
-      <h2 class="text-4xl font-bold mb-8">Vitest Browser Mode</h2>
+      <h2 class="!text-4xl font-bold mb-8 text-gray-200">Vitest Browser Mode</h2>
       <div class="space-y-4">
         <div class="flex items-start gap-4">
-          <div class="text-3xl">🎉</div>
+          <!-- <div class="text-3xl">🎉</div> -->
           <div>
-            <h3 class="text-xl font-bold text-green-400 mb-2">Browser Mode is Stable</h3>
-            <p class="text-base opacity-80">Test in real browsers, no more JSDOM needed.</p>
+            <h3 class="text-xl font-bold text-green-400 mb-2">🔘 Browser Mode is Stable</h3>
+            <p class="text-base opacity-80 ml-7">Test in real browsers, no more JSDOM needed.</p>
           </div>
         </div>
       </div>
       <div class="space-y-4">
         <div class="flex items-start gap-4">
-          <div class="text-3xl">🔍</div>
+          <!-- <div class="text-3xl">🔍</div> -->
           <div>
-            <h3 class="text-xl font-bold text-blue-400 mb-2">Visual Regression Testing</h3>
-            <p class="text-base opacity-80">Visually compare your components, built-in natively in Browser Mode.</p>
+            <h3 class="text-xl font-bold text-blue-400 mb-2">🔘 Visual Regression Testing</h3>
+            <p class="text-base opacity-80 ml-7">Visually compare your components, built-in natively in Browser Mode.</p>
           </div>
         </div>
       </div>
       <div class="space-y-4">
         <div class="flex items-start gap-4">
-          <div class="text-3xl">🎭</div>
+          <!-- <div class="text-3xl">🎭</div> -->
           <div>
-            <h3 class="text-xl font-bold text-purple-400 mb-2">Playwright Traces Support</h3>
-            <p class="text-base opacity-80">Advanced debugging with Playwright traces to easily diagnose failures.</p>
+            <h3 class="text-xl font-bold text-purple-400 mb-2">🔘 Playwright Traces Support</h3>
+            <p class="text-base opacity-80 ml-7">Advanced debugging with Playwright traces to easily diagnose failures.</p>
           </div>
         </div>
       </div>
@@ -370,23 +370,26 @@ layout: full
 
 ---
 layout: full 
-class: text-center
+preload: false
 ---
 
-Key Takeaways
-<div class="grid grid-cols-2 gap-8 mt-12 max-w-6xl mx-auto text-left">
-  <div class="p-6 bg-gray-800 bg-opacity-10 rounded-xl border-l-4 border-violet-400 flex flex-col justify-center">
-    <h3 class="text-2xl font-bold mb-3 text-violet-300">🚀 Rolldown & VitePlus</h3>
-    <p class="text-lg opacity-90">The JavaScript ecosystem powered by Rust: <strong class="text-orange-300">-90% build time</strong> and a unified toolchain.</p>
+<h2 class="text-blue-300 font-sans"> 🔘 Key Takeaways</h2>
+
+<div class="space-y-6 mt-12 max-w-6xl mx-auto text-left">
+  <div class="px-6 py-3 bg-gray-800 bg-opacity-10 rounded-xl border-l-4 border-emerald-400 flex flex-col justify-center">
+    <h3 class="text-2xl font-bold text-emerald-300">Rolldown & VitePlus</h3>
+    <p class="text-lg opacity-90">The JavaScript ecosystem powered by Rust: <strong class="text-blue-300">-90% build time</strong> and a unified toolchain.</p>
   </div>
-  <div class="p-6 bg-gray-800 bg-opacity-10 rounded-xl border-l-4 border-yellow-400 flex flex-col justify-center">
-    <h3 class="text-2xl font-bold mb-3 text-yellow-300">⚡️ OxLint & OxFmt</h3>
-    <p class="text-lg opacity-90">Linting and formatting <strong class="text-green-300">41x faster</strong> for instant feedback and improved DX.</p>
+  <div class="px-6 py-3 bg-gray-800 bg-opacity-10 rounded-xl border-l-4 border-emerald-400 flex flex-col justify-center">
+    <h3 class="text-2xl font-bold text-emerald-300">OxLint & OxFmt</h3>
+    <p class="text-lg opacity-90">Linting and formatting <strong class="text-blue-300">41x faster</strong> for instant feedback and improved DX.</p>
   </div>
-  <div class="p-6 bg-gray-800 bg-opacity-10 rounded-xl border-l-4 border-green-400 flex flex-col justify-center">
-    <h3 class="text-2xl font-bold mb-3 text-green-300">✅ Vitest Browser Mode</h3>
-    <p class="text-lg opacity-90">Testing in real browsers, visual regression testing, and Playwright traces for increased reliability.</p>
+  <div class="px-6 py-3 bg-gray-800 bg-opacity-10 rounded-xl border-l-4 border-emerald-400 flex flex-col justify-center">
+    <h3 class="text-2xl font-bold text-emerald-300">Vitest Browser Mode</h3>
+    <p class="text-lg opacity-90">Testing in real browsers, visual regression testing, and Playwright traces.</p>
   </div>
+
+  <Confetti />
 </div>
 
 <!--
