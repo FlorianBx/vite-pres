@@ -154,7 +154,7 @@ layout: full
 <div class="flex items-center justify-center h-full">
   <div class="w-full max-w-6xl px-16">
     <h2 class="text-center">Benchmark on DT_Main (build time)</h2>
-    <p class="opacity-50 text-center">On a M4 computer</p>
+    <p class="opacity-50 text-center">On a M4 computer from vite: 3.4 to vite: 7.0</p>
     <div class="flex justify-center items-center gap-16">
       <div class="flex flex-col items-center">
         <div class="w-32 h-32 rounded-full border-2 border-red-500 mb-6 relative z-10">
@@ -194,8 +194,6 @@ I made a benchmark on our codebase.
 
   Rollup took 1 minute 24 seconds to build DT_Main and
   Rolldown only 8 seconds.
-
-  The impact of this is ?
 -->
 
 ---
@@ -248,7 +246,7 @@ preload: false
 <!--
 **SPEAKER NOTES - Slide 5bis (25s)**
 
-Today, we use many different tools like Vite, ESLint, Prettier, and Vitest, each with its own configuration. 
+Today, we use many different tools like Vite, ESLint, Prettier, Vitest, each with its own configuration. 
 
 VitePlus simplifies things by combining all these tools into a single unified toolchain.
 -->
@@ -319,7 +317,6 @@ layout: full
       <h2 class="!text-4xl font-bold mb-8 text-gray-200">Vitest Browser Mode</h2>
       <div class="space-y-4">
         <div class="flex items-start gap-4">
-          <!-- <div class="text-3xl">🎉</div> -->
           <div>
             <h3 class="text-xl font-bold text-green-400 mb-2">🔘 Browser Mode is Stable</h3>
             <p class="text-base opacity-80 ml-7">Test in real browsers, no more JSDOM needed.</p>
@@ -328,7 +325,6 @@ layout: full
       </div>
       <div class="space-y-4">
         <div class="flex items-start gap-4">
-          <!-- <div class="text-3xl">🔍</div> -->
           <div>
             <h3 class="text-xl font-bold text-blue-400 mb-2">🔘 Visual Regression Testing</h3>
             <p class="text-base opacity-80 ml-7">Visually compare your components, built-in natively in Browser Mode.</p>
@@ -337,7 +333,6 @@ layout: full
       </div>
       <div class="space-y-4">
         <div class="flex items-start gap-4">
-          <!-- <div class="text-3xl">🎭</div> -->
           <div>
             <h3 class="text-xl font-bold text-purple-400 mb-2">🔘 Playwright Traces Support</h3>
             <p class="text-base opacity-80 ml-7">Advanced debugging with Playwright traces to easily diagnose failures.</p>
@@ -361,7 +356,7 @@ layout: full
 
   First: Browser Mode is stable with Vitest 4 released in October. You can now test in real browsers.
 
-  Second: Visual Regression Testing built-in. You can visually compare components to detect unwanted changes. By the way, shoutout to our QA team — they've already built something similar with Python if I'm remember well, for our design system, and it's working great.
+  Second: Visual Regression Testing built-in. You can visually compare components, to detect unwanted changes. By the way, shoutout to our QA team — they've already built something similar with Python if I'm remember well, for our design system, and it's working great.
 
   Third: Playwright Traces support. When a test fails, you get complete traces to understand what happened.
 
