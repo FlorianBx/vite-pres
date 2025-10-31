@@ -154,7 +154,7 @@ layout: full
 <div class="flex items-center justify-center h-full">
   <div class="w-full max-w-6xl px-16">
     <h2 class="text-center">Benchmark on DT_Main (build time)</h2>
-    <p class="opacity-50 text-center">On a M4 computer</p>
+    <p class="opacity-50 text-center">On a M4 computer from vite: 3.4 to vite: 7.0</p>
     <div class="flex justify-center items-center gap-16">
       <div class="flex flex-col items-center">
         <div class="w-32 h-32 rounded-full border-2 border-red-500 mb-6 relative z-10">
